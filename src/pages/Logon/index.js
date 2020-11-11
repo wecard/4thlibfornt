@@ -13,7 +13,7 @@ export default function Logon() {
         const data = {login,password} 
         console.log(data);
         try{
-            const response = await app.post('/session',{login:login,password:password});
+            const response = await app.post('session',{login:login,password:password});
             console.log(response);
             localStorage.setItem('userProfile',response.data.user_profile);
             localStorage.setItem('login',response.data.login);

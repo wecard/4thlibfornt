@@ -17,7 +17,7 @@ export default function Register(){
         const data = {'name':name, 'login':login, 'password':password, 'user_profile':userProfile};
         console.log(data);
         try{
-            const response = await api.post('/users',{data});        
+            const response = await api.post('users',{data});        
             alert(`Sucesso. id gerado: ${response.data.id}`);
             history.push('/');
         }catch (error){

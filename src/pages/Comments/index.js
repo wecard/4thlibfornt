@@ -10,7 +10,7 @@ export default function Comments(){
     const history = useHistory();
     useEffect(()=>{
     
-        api.get(`/books`
+        api.get(`books`
         ).then(response=> { 
             setComments(response.data);
         });

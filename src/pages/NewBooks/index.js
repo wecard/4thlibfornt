@@ -18,7 +18,7 @@ export default function NewBooks(){
         try{
             const response = await api.post('books',data)        
             alert(`Sucesso. id gerado: ${response.data.id}`);
-            history.push('books');
+            history.push('/books');
         }catch (error){
             alert('Falha ao salvar');
         }

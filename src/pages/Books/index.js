@@ -14,7 +14,7 @@ export default function Books(){
             setBooks(response.data);
         });
     
-    },[Books]); 
+    },[]); 
     
     async function handleDeleteBook(id){
         try{
@@ -52,11 +52,7 @@ export default function Books(){
                         <button onClick={()=> handleDeleteBook(book.id)} type="button" style={{float:'right'}}>
                             <FiTrash2 size={20} color="#A8A8B3"/>
                         </button>
-                        <div>
-                            <button onClick={()=> handleDeleteBook(book.id)} type="button" style={{float:'right'}}>
-                                <FiMessageCircle size={20} color="#A8A8B3"/>
-                            </button>
-                        </div>
+                        
                     </li>
                 ))}
                 

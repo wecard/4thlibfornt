@@ -14,10 +14,10 @@ export default function Register(){
         e.preventDefault();
         setUserProfile(1);
         
-        const data = {'name':name, 'login':login, 'password':password, 'user_profile':userProfile};
+        const data = {"name":name, "login":login, "password":password, "user_profile":userProfile};
         console.log(data);
         try{
-            const response = await api.post('users',{data});        
+            const response = await api.post('users',data);        
             alert(`Sucesso. id gerado: ${response.data.id}`);
             history.push('/');
         }catch (error){
@@ -40,12 +40,12 @@ export default function Register(){
                     <input 
                         value={name} 
                         onChange = {e=> setName(e.target.value)}
-                         
+                        required
                         placeholder = "Nome"/>
                     <input 
                         value={login} 
                         onChange = {e =>setLogin(e.target.value)}
-                         
+                        required 
                         title="Esse email será o seu login" 
                         placeholder = "e-mail para login"/>
                     <input 

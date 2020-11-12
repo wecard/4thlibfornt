@@ -33,8 +33,8 @@ export default function Logon() {
             <form onSubmit={handleLogin}>
                 
                 <h1> 4thlib </h1> 
-                <input value={login}   onChange={e=> setLogin(e.target.value)} placeholder = "login"/>
-                <input type="password" value={password} onChange={e=> setPassword(e.target.value)} placeholder = "senha"/>
+                <input value={login} required onChange={e=> setLogin(e.target.value)} placeholder = "login"/>
+                <input type="password" required value={password} onChange={e=> setPassword(e.target.value)} placeholder = "senha"/>
                 
                 <button className="button"> Entrar</button>
                 <Link className="back-link" to="/register">

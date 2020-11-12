@@ -46,8 +46,8 @@ export default function Register(){
                         value={login} 
                         onChange = {e =>setLogin(e.target.value)}
                          
-                        type="email" 
-                        placeholder = "Email"/>
+                        title="Esse email será o seu login" 
+                        placeholder = "e-mail para login"/>
                     <input 
                         value={password}  
                         onChange = {e=> setPassword(e.target.value)}

@@ -13,6 +13,7 @@ export default function NewComment(){
             const data = {"comment":comment,"books_id":localStorage.getItem('commentBookID'),"comment_date":"2020-11-04 01:19:00"};
             console.log(data);
             const response = await api.post('comments',data);
+            alert(`Sucesso. id gerado: ${response.data.id}`);
         }catch{
             alert('Falha ao salvar');
         }

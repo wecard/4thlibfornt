@@ -51,7 +51,7 @@ export default function Register(){
                     <input 
                         value={password}  
                         onChange = {e=> setPassword(e.target.value)}
-                         
+                        required             
                         type="password" 
                         placeholder = "Senha"/>
 
